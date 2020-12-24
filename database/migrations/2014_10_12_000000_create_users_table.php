@@ -22,8 +22,9 @@ class CreateUsersTable extends Migration
             $table->string('role')->default('reader');
             $table->string('profile-picture')->nullable();
             $table->string('address')->nullable();
-            $table->string('work_at')->nullable();
-            $table->date('birthdate')->nullable();
+            $table->string('job_name')->nullable();
+            $table->string('job_location')->nullable();
+            $table->date('date_of_birth')->nullable();
             $table->rememberToken();
             $table->timestamps();
         });
