@@ -7,6 +7,7 @@ use Illuminate\Http\JsonResponse;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 
+
 trait RegistersUsers
 {
     use RedirectsUsers;
@@ -63,6 +64,6 @@ trait RegistersUsers
      */
     protected function registered(Request $request, $user)
     {
-        //
+        event(new Registered($user));
     }
 }

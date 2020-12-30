@@ -17,7 +17,7 @@ class CreateHidepostTable extends Migration
             $table->id();
             $table->foreignId('user_id');
             $table->foreignId('post_id')->index('post_indent');
-            $table->foreign('post_id')->references('id')->on('post')->onDelete('cascade');
+            $table->foreign('post_id')->references('id')->on('article')->onDelete('cascade');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->timestamps();
         });

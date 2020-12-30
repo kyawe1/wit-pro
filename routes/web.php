@@ -17,6 +17,9 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes();
+Auth::routes(['verified'=>true]);
 
+Route::get('/email/verify',function(){
+    return view('auth.verify');
+})->name('verification.notice')->middleware('auth');
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

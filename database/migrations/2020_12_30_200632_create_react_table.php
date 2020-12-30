@@ -18,7 +18,7 @@ class CreateReactTable extends Migration
             $table->foreignId('user_id');
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');
             $table->foreignId('post_id');
-            $table->foreign('post_id')->references('id')->on('post')->onDelete('cascade');
+            $table->foreign('post_id')->references('id')->on('article')->onDelete('cascade');
             $table->timestamps();
         });
     }

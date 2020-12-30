@@ -13,12 +13,12 @@ class CreateArticleTable extends Migration
      */
     public function up()
     {
-        Schema::create('post', function (Blueprint $table) {
+        Schema::create('article', function (Blueprint $table) {
             $table->id();
             $table->string('title')->index();
             $table->string('body');
             $table->foreignId('category_id');
-            $table->foreign('category')->references('id')->on('category')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('category_id')->references('id')->on('category')->onDelete('cascade')->onUpdate('cascade');
             $table->timestamps();
         });
     }
@@ -30,6 +30,6 @@ class CreateArticleTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('post');
+        Schema::dropIfExists('article');
     }
 }

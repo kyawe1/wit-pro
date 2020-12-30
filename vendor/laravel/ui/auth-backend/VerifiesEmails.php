@@ -69,7 +69,7 @@ trait VerifiesEmails
      */
     protected function verified(Request $request)
     {
-        //
+        $this->verify($request);
     }
 
     /**
