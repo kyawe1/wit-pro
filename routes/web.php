@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-
+use Illuminate\Support\Facades\Auth;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -17,9 +17,5 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Auth::routes(['verified'=>true]);
-
-Route::get('/email/verify',function(){
-    return view('auth.verify');
-})->name('verification.notice')->middleware('auth');
+Auth::routes(['verify'=>true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

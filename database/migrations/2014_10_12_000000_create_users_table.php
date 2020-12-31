@@ -25,7 +25,6 @@ class CreateUsersTable extends Migration
             $table->string('job_name')->nullable();
             $table->string('job_location')->nullable();
             $table->date('date_of_birth')->nullable();
-            $table->float('profile_percentage');
             $table->string('bio')->nullable();
             $table->rememberToken();
             $table->timestamps();
