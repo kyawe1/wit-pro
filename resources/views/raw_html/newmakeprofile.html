@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+
+    <head>
+        
+    <meta charset="utf-8">
+        
+    <title>MakeProfile</title>
+       
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+     <link rel="stylesheet" href="newmakeprofile.css">   
+        
+     </head>
+        <body>
+            
+            <div class="top">
+                
+                <span class="dropdown" >
+               
+                  
+                <i class="fa fa-bars" aria-hidden="true" id="dot3" onclick="myFunction()"></i>
+                
+  
+                
+                   <div id="myDropdown" class="dropdown-content">
+                
+                            <input type="checkbox" id="toggle1" class="acc1" hidden >  
+                       
+                       <label for="toggle1" name="toggle" id="toggle1" onclick="mySecond()"> Account Setting</label> <hr> 
+                
+                       
+                       
+                                        <div id="dropdown-contentsss" class="dropdown-contentss">
+                                        
+                                        <a href="#" >Change Personal Information</a><hr>
+                                        <a href="#">Change Password</a><hr>
+                                        <a href="#">Reselect Categories</a><hr>
+                                        
+                                            </div>
+                                          
+
+                                       <a href="#">Saved Posts</a><hr>
+                                        <a href="#">Make a profile</a><hr>
+                                        <a href="#">Report a problem</a><hr>
+                                        <a href="#">Logout</a><hr>
+                               </div>
+                   
+            </span>
+                <div class="logo">
+                    
+            <text> WIT Project</text>
+                
+                    <div class="search">
+                        
+                    <i class="fa fa-search" ></i>
+                        
+                      <input  type="text" placeholder="Search" class="box">
+                    
+                         
+                         
+                          <div class="profileform">
+                
+                             <form method="get" action="">
+                    
+                                    <div class="form">
+                   
+                                       <a href=" "><img scr="" class="dog" ><i class="fa fa-plus-circle" id="plus"></i><comment class="sen">Add a photo</comment></a>
+                                        
+                                      
+ 
+                                                <input type="text" placeholder="Jobs" required="required"><br />
+
+                                                <input type="text" placeholder="Location" required="required"><br />
+
+                                            <input type="text" placeholder="Bio" required="required"><br />
+
+                                            <input type="text" placeholder="Phone Number" required="required"><br />
+
+
+                                            <input type="text" placeholder="Date Of Birth" required="required"><br />
+
+                                        <text class="comment">Enter Your Email and Password again for comfirmation</text>
+
+                                         <input type="text" placeholder="Email" required="required"><br />
+
+
+                                            <input type="password"placeholder="Password" required="required"><br />
+
+                                        <a href="category.html"><input type="button" value="Make Profile" class="btn"></a>
+
+                                                </div>
+
+                    
+                </form>
+                
+            </div>
+  
+          
+                       
+            </div>
+                    </div>
+            </div>
+             
+    <script>
+       
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+window.onclick = function(event) {
+    if (!event.target.matches('#dot3')) {
+
+  
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+function mySecond() {
+  document.getElementById("dropdown-contentsss").classList.toggle("shows");
+}
+
+
+window.onclick = function(event) {
+  if (!event.target.matches('#toggle1')) {
+    var dropdowns = document.getElementsByClassName("dropdown-contentss");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('shows')) {
+        openDropdown.classList.remove('shows');
+      }
+    }
+  }
+}
+                                     </script>
+    </body>
+                
+</html>
+            
+
+            
+            
+            
+            
+            
+            
+       
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

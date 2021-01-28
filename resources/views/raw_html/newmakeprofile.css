@@ -1,0 +1,306 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body
+{
+    background-color: whitesmoke;
+    width:auto;
+    height:auto;
+    overflow: hidden;
+}
+.top
+{
+    width:1366px;
+    height:45px;
+    background-color:#186871;
+    
+    
+    
+}
+.logo
+{
+    margin-left:10px;
+    padding:12px;
+    color:white;;
+    font-family: Comic Sans fantasy;
+    font-size:20px;
+    
+}
+.search
+{
+    margin-left:484px;
+    margin-top:-44px;
+    
+   
+    
+    
+}
+
+.box
+{
+    border-radius: 8px 8px 8px 8px;
+    height: 16px;
+    border-color:snow;
+    font-family:sans-serif;
+    border-bottom-style:solid;
+    border-right-style: solid;
+    padding:2px 2px 2px 2px;
+    margin-top: 21px;
+    width:275px;
+    background-color:#186871;
+    padding-left: 23px;
+    color:white;
+}
+.box::placeholder
+{
+    color:white;
+    padding-left: 2px;
+    text-decoration: 
+}
+
+.search i 
+{
+    position: absolute;
+}
+
+i
+{
+            
+            color:white;
+            margin-left: 70px;
+            margin-top:22px;
+            padding:3px 3px 3px 3px; 
+          
+        }
+.fa
+{
+    font-size: 14px;
+    
+}
+    
+         
+.form
+{
+    
+    width:410px;
+    height:559px;
+    background-color:white;
+    margin-left:-31px;
+    margin-top:-92px;
+    
+}
+.profileform
+{
+    
+    margin-top:101px;
+    padding:39px;
+    
+    
+}
+
+.dog
+{
+    
+    border-radius:50%;
+    width:100px;
+    height:100px;
+    background-color:transparent;
+    margin-left: 150px;
+    margin-top:20px;
+    color:gray;
+    border-style:solid;
+   
+  
+}
+#plus
+{
+    margin-left:-65px;
+    margin-top:45px;
+    color:dimgray;
+    font-size:17px;
+}
+a
+{
+    text-decoration: none;
+}
+comment
+{
+    margin-top:80px;
+    margin-left: -88px;
+    position: absolute;
+}
+.sen
+{
+    color:dimgray;
+    font-size:14px;
+    font-family: sans-serif;
+    
+}
+
+
+input
+{
+    border-style:outset;
+    padding:9px;
+    margin-left:65px;
+    width:270px;
+    margin-top:11px;
+    border-color:white;
+    background-color:white;
+    border-radius:8px 8px 8px 8px;
+    font-size: 13px;
+    box-shadow: 0 5px px rgba(0,0,0.1,0);
+    color:black;
+    
+}
+
+text
+{
+    font-family: Comic Sans fantasy;
+    font-size:15px;
+    font-style:normal;
+    margin-left: 67px;
+    padding-top: 30px;
+   
+    
+}
+.comment
+{
+    font-size: 11px;
+    color:black;
+    font-style: normal;
+    font-family:sans-serif;
+    text-decoration: none;
+}
+.btn
+{
+    width:292px;
+    background-color: #186871;
+    border-color:#186871;
+    border-radius:8px 8px 8px 8px;
+    padding:4px 4px 4px 4px;
+    height:35px;
+    border-bottom-style:   solid;
+    border-right-style: solid;
+    box-shadow: 0 5px px rgba(0,0,0.1,0);
+    color:white;
+}
+.btn:hover
+{
+    color: #00ffff;
+    cursor: pointer;
+    
+}
+#dot3{
+   
+    cursor: pointer;
+   margin-left: -105px;
+    margin-top: 16px;
+    font-size: 16px;
+}
+
+
+
+.dropbtn {
+    
+    background-color: #186871;
+    color: white;
+    padding: 14px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-color:#186871;
+    
+        
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+    background-color: #186871;
+    border-color: #186871;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+       border-color: #186871;
+    position:relative;
+    display: inline-block;
+    float: right;
+    margin-right:20px;
+    margin-top:-4px;
+   
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    margin-top: 17px;
+    right:0;
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 250px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+}
+
+/* Links inside the dropdown */
+.dropdown-content a{
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color:gainsboro} 
+.dropdown-content{
+    display: none;
+}
+.a{
+    margin-top: 100px;
+    
+}
+.acc1{
+    
+    padding:40px;
+}
+.dropdown-content>label:hover{
+    background-color: gainsboro;
+}
+.dropdown-content>label{
+    
+    width:250px ;
+    height:33px;
+    padding-top:14px;
+    padding-left:15px;
+    display: flex;
+    color: black;
+    cursor: pointer;
+    margin-top: -3px;
+    font-size: 18px;
+}
+.dropdown-content > label:after{
+    content: "\f078";
+    font-family: fontawesome;
+    position: absolute;
+    top:13px;
+    right:20px;
+    transform: rotate(0deg);
+    transition: transform .3s;
+    color:black
+}
+ .dropdown-content > .acc1:checked ~ label:after {
+    transform: rotate(180deg);
+     
+     
+}
+
+.show {display:block;}
+
+.dropdown-contentss{
+    display: none;
+}
+.shows {display:block;}
