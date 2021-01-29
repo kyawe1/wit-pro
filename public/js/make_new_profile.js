@@ -19,8 +19,13 @@ function myFunction() {
   function mySecond() {
     document.getElementById("dropdown-contentsss").classList.toggle("shows");
   }
-
-
+  document.getElementById('add_photo').onclick=()=>{
+    let m=document.getElementById('photo');
+    m.click();
+  }
+  document.getElementById('photo').onchange=(e)=>{
+    document.getElementById('dog').src=document.getElementById('photo').value;
+  }
   window.onclick = function (event) {
     if (!event.target.matches('#toggle1')) {
       var dropdowns = document.getElementsByClassName("dropdown-contentss");

@@ -13,9 +13,9 @@
 
             <div class="form">
 
-                <a href=" "><img scr="" class="dog"><i class="fa fa-plus-circle" id="plus"></i>
+                <span id="add_photo"><img scr="" class="dog" id='dog'/><i class="fa fa-plus-circle" id="plus"></i>
                     <comment class="sen">Add a photo</comment>
-                </a>
+                </span>
 
 
 
@@ -30,14 +30,9 @@
 
                 <input type="text" placeholder="Date Of Birth" required="required"><br />
 
-                <text class="comment">Enter Your Email and Password again for comfirmation</text>
+                <input type="file" id='photo' style='display:none;' required="required" value=''><br />
 
-                <input type="text" placeholder="Email" required="required"><br />
-
-
-                <input type="password" placeholder="Password" required="required"><br />
-
-                <a href="category.html"><input type="button" value="Make Profile" class="btn"></a>
+                <input type="submit" value="Make Profile" class="btn">
 
             </div>
 
