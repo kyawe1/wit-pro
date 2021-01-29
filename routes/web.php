@@ -15,8 +15,10 @@ use Illuminate\Support\Facades\Auth;
 
 Route::get('/', function () {
     return view('home',['css'=>'css/Home.css']);
-});
+})->middleware('nonlogin');
 
 Auth::routes(['verify'=>true]);
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/category',[App\Http\Controllers\ProfileController::class,'index'])->name('category');
+
+Route::get('/new_profile',[\App\Http\Controllers\ProfileController::class,'create'])->name('create_profile');

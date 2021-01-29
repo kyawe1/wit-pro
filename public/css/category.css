@@ -187,9 +187,7 @@ input
 #ce
 {
     background-color:snow;
-        border-radius:8px 8px 8px 8px;
-
-             
+    border-radius:8px 8px 8px 8px;     
     width:164px;
     height:32px;
     font-size: 14px;
@@ -343,6 +341,5 @@ input
     color:black;
 }
 #btn:hover{
-   ;
     color:snow;
 }

@@ -14,4 +14,8 @@ class ProfileController extends Controller
     {
         return view('category',['css'=>'css/Category.css']);
     }
+    public function create()
+    {
+        return view('new_make_profile');
+    }
 }
