@@ -8,7 +8,7 @@
 </div>
 
 <div class="Box">
-<form action="http://localhost:8000/register" method="post" >
+<form action="{{ route('register') }}" method="post" >
     <h2>Please Fill Your Information</h2>
     
    @csrf
@@ -22,7 +22,7 @@
     
     
 <div>
-<input type="password" placeholder="Password" class="box_diff" id="myInput1" name="pw">
+<input type="password" placeholder="Password" class="box_diff" id="myInput1" name="password">
     <span  onclick="myFunction1()">
         <i class="fa fa-eye eye" id="hidden1"></i>
             <i class="fa fa-eye-slash eye" id="hidden2" ></i>   
@@ -30,7 +30,7 @@
 </div>
     
 <div>
-<input type="password" placeholder="Confirm Password" class="box_diff" id="myInput2" name="cpw">
+<input type="password" placeholder="Confirm Password" class="box_diff" id="myInput2" name="password_confirmation">
     <span  onclick="myFunction2()">
         <i class="fa fa-eye eye" id="hidden3"></i>
             <i class="fa fa-eye-slash eye" id="hidden4" ></i>
@@ -39,7 +39,9 @@
 </div>
     
 <div>
-    <input type="submit" value="Sign Up" class="SignUp_button">
+    <button type="submit" value="Sign Up" class="SignUp_button">
+    {{ __('Register') }}
+    </button>
 </div>
 
     <div class="content">

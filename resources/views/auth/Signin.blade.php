@@ -12,15 +12,16 @@
 
 
     <div class="Box">
-
+        <form action="{{url('login')}}" method="post">
+        @csrf
         <h2>Please Fill Your Information</h2>
 
         <div>
-            <input type="text" placeholder="E-mail" class="box_diff">
+            <input type="text" placeholder="E-mail" class="box_diff" name='email'>
         </div>
 
         <div>
-            <input type="password" placeholder="Password" class="box_diff" id="myInput">
+            <input type="password" placeholder="Password" class="box_diff" id="myInput" name='password'>
             <span onclick="myFunction()">
                         <i class="fa fa-eye eye" id="hidden1"></i>
                         <i class="fa fa-eye-slash eye" id="hidden2" ></i>
@@ -29,7 +30,9 @@
         </div>
 
         <div>
-            <a href=""> <input type="button" value="Sign In" class="SignIn_button"></a>
+             <button type='submit' class='SignIn_button'>
+                {{ __('Login') }}
+             </button>
         </div>
 
 
@@ -39,6 +42,7 @@
 
         </div>
     </div>
+    </form>
     <script>
         function myFunction() {
 

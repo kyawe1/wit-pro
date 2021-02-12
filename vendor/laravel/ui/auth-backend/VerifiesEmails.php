@@ -19,9 +19,10 @@ trait VerifiesEmails
      */
     public function show(Request $request)
     {
+        $home=url('css/app.css');
         return $request->user()->hasVerifiedEmail()
                         ? redirect($this->redirectPath())
-                        : view('auth.verify');
+                        : view('auth.verify',['home'=>$home]);
     }
 
     /**
