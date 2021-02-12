@@ -19,7 +19,8 @@ trait RegistersUsers
      */
     public function showRegistrationForm()
     {
-        return view('auth.register');
+        $url=asset('css/Signup.css');
+        return view('auth.Signup',['home'=>$url]);
     }
 
     /**

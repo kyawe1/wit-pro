@@ -7,40 +7,40 @@ body
 .top
 {
     width:100%;
-    height:50px;
     background-color:#186871;
-    margin-top: -8px;
-    margin-left: -8px;
-    
+    margin-bottom:5px;
 }
-.logo
+*{
+    margin:0;
+    padding:0;
+}
+.gg
 {
-    margin-left:40px;
-    padding:12px;
-    color:white;;
-    font-family: Comic Sans MS;
-          
-    
+  width:125px;
+    height:44px;
+   padding-left:35px;
+   padding-top: 5px; 
+}
+.boy{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    place-content:center;
+    height: 90vh;
 }
 .girl
 {
     width:510px;
     height:320px;
-    margin-top:165px;
-    margin-left:auto;
-    margin-right:auto;
-    
-    
+    margin:auto;
 }
 .form
 {
-    
     width:515px;
     height:415px;
     background-color: whitesmoke;
-    margin-left:612px;
-    margin-top:-376px;
     border-radius:8px 8px 8px 8px;
+    margin:auto;
 }
 .inside
 {
@@ -188,7 +188,9 @@ input
 #ce
 {
     background-color:snow;
-    border-radius:8px 8px 8px 8px;     
+        border-radius:8px 8px 8px 8px;
+
+             
     width:164px;
     height:32px;
     font-size: 14px;
@@ -342,5 +344,10 @@ input
     color:black;
 }
 #btn:hover{
+   
     color:snow;
+}
+@media only screen and (max-width: 1120px) {
+    .girl {display:none;}
+    
 }

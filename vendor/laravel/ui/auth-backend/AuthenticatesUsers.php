@@ -18,7 +18,8 @@ trait AuthenticatesUsers
      */
     public function showLoginForm()
     {
-        return view('auth.login');
+        $url=asset('css/Signin.css');
+        return view('auth.Signin',['home'=>$url]);
     }
 
     /**

@@ -1,7 +1,7 @@
 @include('parts/head')
 
 <div class="dog">
-    <img src="{{asset('picture/Home.png')}}" width=100% height=100%>
+    <img src="{{asset('icons/Home.png')}}" width=100% height=100%>
     <div class="form">
         <div>
             <div class="inside">
@@ -11,13 +11,8 @@
                 <br />
                 <a href="{{route('register')}}"><button  value="Sign Up" id="btn1">Sign Up</button></a>
                 <a href="{{route('login')}}"><button  value="Sign In" id="btn2">Sign In</button></a>
-
             </div>
         </form>
-
-
-
-
     </div>
 </div>
 </div>
