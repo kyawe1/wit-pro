@@ -53,7 +53,7 @@
 
                     <br />
 
-                    <input type="button" value="Confirm" id="btn" />
+                    <input type="submit" value="Confirm" id="btnSubmit" />
                 </div>
             </form>
         </div>
