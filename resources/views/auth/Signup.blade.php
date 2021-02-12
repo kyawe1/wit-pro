@@ -8,32 +8,29 @@
 </div>
 
 <div class="Box">
-<form action="" method="get">
+<form action="http://localhost:8000/register" method="post" >
     <h2>Please Fill Your Information</h2>
     
-    
+    @csrf
     <div>
-        <input type="text" placeholder="Username" class="box_diff" >
+        <input type="text" placeholder="Username" class="box_diff" name="username">
     </div>
     
 <div>   
-    <input type="text" placeholder="E-mail" class="box_diff" >
-    
+    <input type="text" placeholder="E-mail" class="box_diff" name="email">
 </div>
     
     
 <div>
-<input type="password" placeholder="Password" class="box_diff" id="myInput1">
+<input type="password" placeholder="Password" class="box_diff" id="myInput1" name="pw">
     <span  onclick="myFunction1()">
         <i class="fa fa-eye eye" id="hidden1"></i>
-            <i class="fa fa-eye-slash eye" id="hidden2" ></i>
-    
+            <i class="fa fa-eye-slash eye" id="hidden2" ></i>   
     </span>
-    </div>
-    
+</div>
     
 <div>
-<input type="password" placeholder="Confirm Password" class="box_diff" id="myInput2" >
+<input type="password" placeholder="Confirm Password" class="box_diff" id="myInput2" name="cpw">
     <span  onclick="myFunction2()">
         <i class="fa fa-eye eye" id="hidden3"></i>
             <i class="fa fa-eye-slash eye" id="hidden4" ></i>
@@ -42,8 +39,7 @@
 </div>
     
 <div>
-
-    <a href=""><input type="button" value="Sign Up" class="SignUp_button" ></a>
+    <input type="submit" value="Sign Up" class="SignUp_button">
 </div>
 
     <div class="content">
