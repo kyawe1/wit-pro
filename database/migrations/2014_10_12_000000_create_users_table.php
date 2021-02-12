@@ -20,6 +20,7 @@ class CreateUsersTable extends Migration
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
             $table->string('role')->default('reader');
+            $table->string('category');
             $table->string('profile-picture')->nullable();
             $table->string('address')->nullable();
             $table->string('job_name')->nullable();
