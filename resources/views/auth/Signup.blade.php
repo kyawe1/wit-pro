@@ -11,7 +11,7 @@
 <form action="http://localhost:8000/register" method="post" >
     <h2>Please Fill Your Information</h2>
     
-    @csrf
+   @csrf
     <div>
         <input type="text" placeholder="Username" class="box_diff" name="username">
     </div>
