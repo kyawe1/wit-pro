@@ -15,65 +15,43 @@
 
 <body>
 
-    <header class="top">
+<header class="top">
+    <div class="logo">WIT Project</div>
 
-        <div class="logo">
+    <div class="search box">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Search" class="search-box" />
+    </div>
+    <span class="dropdown">
+      <i class="fa fa-bars" aria-hidden="true" id="dot3" onclick="myFunction()"></i>
 
-            <img src="Premier%20logo%20(white).svg" class="gg">
+      <div id="myDropdown" class="dropdown-content">
+        <input type="checkbox" id="toggle1" class="acc1" hidden />
 
+        <label for="toggle1" name="toggle" id="toggle1" onclick="mySecond()">
+          Account Setting</label>
+        <hr />
+
+        <div id="dropdown-contentsss" class="dropdown-contentss">
+          <a href="#">Change Personal Information</a>
+          <hr />
+          <a href="#">Change Password</a>
+          <hr />
+          <a href="#">Reselect Categories</a>
+          <hr />
         </div>
 
-        <div class="search">
-
-            <i class="fa fa-search"></i>
-
-            <input type="text" placeholder="Search" class="box">
-
-        </div>
-
-        <div class="menuspace">
-
-            <span class="dropdown">
-
-
-                <i class="fa fa-bars" aria-hidden="true" id="dot3" onclick="myFunction()"></i>
-
-
-
-                <div id="myDropdown" class="dropdown-content">
-
-                    <input type="checkbox" id="toggle1" class="acc1" hidden>
-
-                    <label for="toggle1" name="toggle" id="toggle1" onclick="mySecond()"> Account Setting</label>
-                    <hr>
-
-
-
-                    <div id="dropdown-contentsss" class="dropdown-contentss">
-
-                        <a href="#">Change Personal Information</a>
-                        <hr>
-                        <a href="#">Change Password</a>
-                        <hr>
-                        <a href="#">Reselect Categories</a>
-                        <hr>
-
-                    </div>
-
-
-                    <a href="#">Saved Posts</a>
-                    <hr>
-                    <a href="#">Make a profile</a>
-                    <hr>
-                    <a href="#">Report a problem</a>
-                    <hr>
-                    <a href="#">Logout</a>
-                    <hr>
-                </div>
-
-            </span>
-        </div>
-    </header>
+        <a href="#">Saved Posts</a>
+        <hr />
+        <a href="#">Make a profile</a>
+        <hr />
+        <a href="#">Report a problem</a>
+        <hr />
+        <a href="#">Logout</a>
+        <hr />
+      </div>
+    </span>
+  </header>
 
     <div class="profileform">
         <div class="form">
