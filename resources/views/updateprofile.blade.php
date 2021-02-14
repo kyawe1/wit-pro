@@ -9,7 +9,7 @@
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="stylesheet" href="updateprofile.css">
+    <link rel="stylesheet" href="{{asset('css/updateprofile.css')}}">
 
 </head>
 
@@ -76,31 +76,28 @@
     </header>
 
     <div class="profileform">
-
-
-
         <div class="form">
+            <form method="post" action="{{route('c_profile')}}" class='make_profile'>
+                @csrf
+                <div class='filechooser-container'>
+                <img src='{{asset("icons/dog.jpg")}}'  class='pic1' id='preview'>
+                <div class="file-chooser-updated" id='file-chooser'>
+                    <i class="fa fa-plus-circle" id="plus"></i>
+                    <comment class="sen" id='san'>Add a photo</comment>
+                </div>
+                </div>
+                <input type='file' name='photo' style='display:none;' id='photo' value=''>
+                <input type="text" name='job' placeholder="Jobs" required="required" value='{{request()->user()->job_name}}' /><br />
 
-            <img src="dog.jpg" class="pic1">
+                <input type="text" name='location' placeholder="Location" required="required" value='{{request()->user()->job_location}}' /><br />
 
-            <a href="#"><i class="fa fa-plus-circle" id="plus"></i>
-                <comment class="sen">Change Photo</comment>
-            </a>
+                <input type="text" name='bio' placeholder="Bio" required="required" value='{{request()->user()->bio}}' /><br />
 
+                <input type="text" placeholder="Phone Number" name='phno' required="required" value='{{request()->user()->phonenumber}}' /><br />
 
-
-            <input type="text" placeholder="Jobs" required="required"><br />
-
-            <input type="text" placeholder="Location" required="required"><br />
-
-            <input type="text" placeholder="Bio" required="required"><br />
-
-            <input type="text" placeholder="Phone Number" required="required"><br />
-
-
-            <input type="text" placeholder="Date Of Birth" required="required"><br />
-
-            
+                <input type="text" placeholder="Date Of Birth" name='dob' required="required" value='{{request()->user()->date_of_birth}}' /><br />
+                <input type="submit" value="Update Profile" class="btn" />
+            </form>
 
         </div>
 

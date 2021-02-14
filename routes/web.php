@@ -23,3 +23,4 @@ Route::get('/category',[App\Http\Controllers\ProfileController::class,'index'])-
 
 Route::get('/new_profile',[\App\Http\Controllers\ProfileController::class,'create'])->name('create_profile');
 Route::post('/new_profile',[\App\Http\Controllers\ProfileController::class,'make_profile'])->name('c_profile');
+Route::get('/update_profile',[\App\Http\Controllers\ProfileController::class,'update_profile'])->name('update_profile');
