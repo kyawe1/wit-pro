@@ -22,3 +22,4 @@ Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name
 Route::get('/category',[App\Http\Controllers\ProfileController::class,'index'])->name('category');
 
 Route::get('/new_profile',[\App\Http\Controllers\ProfileController::class,'create'])->name('create_profile');
+Route::post('/new_profile',[\App\Http\Controllers\ProfileController::class,'make_profile'])->name('c_profile');

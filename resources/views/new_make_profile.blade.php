@@ -1,131 +1,81 @@
 @extends('layouts/app')
-@section('new_make_profile')
+@section('home')
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="utf-8" />
 
-    <title>NewMakeProfile</title>
+<head>
+  <meta charset="utf-8" />
+  <link rel='shortcut icon' href='{{asset("icons/Premier logo (white)")}}'>
+  <title>NewMakeProfile</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
+  <link rel="stylesheet" href="{{asset('newmakeprofile.css')}}" />
+</head>
 
-    <link rel="stylesheet" href="newmakeprofile.css" />
-  </head>
-  <body>
-    <header class="top">
-      <div class="logo">WIT Project</div>
+<body>
+  <header class="top">
+    <div class="logo">WIT Project</div>
 
-      <div class="search box">
-        <i class="fa fa-search"></i>
-        <input type="text" placeholder="Search" class="search-box" />
-      </div>
-      <span class="dropdown">
-        <i
-          class="fa fa-bars"
-          aria-hidden="true"
-          id="dot3"
-          onclick="myFunction()"
-        ></i>
+    <div class="search box">
+      <i class="fa fa-search"></i>
+      <input type="text" placeholder="Search" class="search-box" />
+    </div>
+    <span class="dropdown">
+      <i class="fa fa-bars" aria-hidden="true" id="dot3" onclick="myFunction()"></i>
 
-        <div id="myDropdown" class="dropdown-content">
-          <input type="checkbox" id="toggle1" class="acc1" hidden />
+      <div id="myDropdown" class="dropdown-content">
+        <input type="checkbox" id="toggle1" class="acc1" hidden />
 
-          <label for="toggle1" name="toggle" id="toggle1" onclick="mySecond()">
-            Account Setting</label
-          >
+        <label for="toggle1" name="toggle" id="toggle1" onclick="mySecond()">
+          Account Setting</label>
+        <hr />
+
+        <div id="dropdown-contentsss" class="dropdown-contentss">
+          <a href="#">Change Personal Information</a>
           <hr />
-
-          <div id="dropdown-contentsss" class="dropdown-contentss">
-            <a href="#">Change Personal Information</a>
-            <hr />
-            <a href="#">Change Password</a>
-            <hr />
-            <a href="#">Reselect Categories</a>
-            <hr />
-          </div>
-
-          <a href="#">Saved Posts</a>
+          <a href="#">Change Password</a>
           <hr />
-          <a href="#">Make a profile</a>
-          <hr />
-          <a href="#">Report a problem</a>
-          <hr />
-          <a href="#">Logout</a>
+          <a href="#">Reselect Categories</a>
           <hr />
         </div>
-      </span>
-    </header>
-    <div class="profileform">
-      <div class="form">
-        <form method="get" action="" class='make_profile'>
-          <div class="file-chooser">
-            <i class="fa fa-plus-circle" id="plus"></i
-            ><comment class="sen">Add a photo</comment>
-          </div>
-          <input type="text" placeholder="Jobs" required="required" /><br />
 
-          <input type="text" placeholder="Location" required="required" /><br />
-
-          <input type="text" placeholder="Bio" required="required" /><br />
-
-          <input
-            type="text"
-            placeholder="Phone Number"
-            required="required"
-          /><br />
-
-          <input
-            type="text"
-            placeholder="Date Of Birth"
-            required="required"
-          /><br />
-          <a href="category.html">
-            <input type="submit" value="Make Profile" class="btn" />
-          </a>
-        </form>
+        <a href="#">Saved Posts</a>
+        <hr />
+        <a href="#">Make a profile</a>
+        <hr />
+        <a href="#">Report a problem</a>
+        <hr />
+        <a href="#">Logout</a>
+        <hr />
       </div>
-    </div>
+    </span>
+  </header>
+  <div class="profileform">
+    <div class="form">
+    <form method="post" action="{{route('c_profile')}}" class='make_profile'>
+        @csrf
+        <div class="file-chooser" id='file-chooser'>
+          <img src='' alt='' style='width:100%;display:none;border-radius: 50%;border:solid 3px #808080;' id='preview'>
+          <i class="fa fa-plus-circle" id="plus"></i>
+          <comment class="sen" id='san'>Add a photo</comment>
+        </div>
+        <input type='file' name='photo' style='display:none;' id='photo'>
+        <input type="text" name='job' placeholder="Jobs" required="required" /><br />
 
-    <script>
-      function myFunction() {
-        document.getElementById("myDropdown").classList.toggle("show");
-      }
+        <input type="text" name='location' placeholder="Location" required="required" /><br />
 
-      window.onclick = function (event) {
-        if (!event.target.matches("#dot3")) {
-          var dropdowns = document.getElementsByClassName("dropdown-content");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("show")) {
-              openDropdown.classList.remove("show");
-            }
-          }
-        }
-      };
-      function mySecond() {
-        document
-          .getElementById("dropdown-contentsss")
-          .classList.toggle("shows");
-      }
+        <input type="text" name='bio' placeholder="Bio" required="required" /><br />
 
-      window.onclick = function (event) {
-        if (!event.target.matches("#toggle1")) {
-          var dropdowns = document.getElementsByClassName("dropdown-contentss");
-          var i;
-          for (i = 0; i < dropdowns.length; i++) {
-            var openDropdown = dropdowns[i];
-            if (openDropdown.classList.contains("shows")) {
-              openDropdown.classList.remove("shows");
-            }
-          }
-        }
-      };
-    </script>
-  </body>
+        <input type="text" placeholder="Phone Number" name='phno' required="required" /><br />
+
+        <input type="text" placeholder="Date Of Birth" name='dob' required="required" /><br />
+        <input type="submit" value="Make Profile" class="btn" />
+      </form>
+
+  <script src='{{asset("js/make_new_profile.js")}}'></script>
+</body>
+
 </html>
 
-  @endsection
+@endsection
